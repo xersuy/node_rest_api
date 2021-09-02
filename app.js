@@ -5,14 +5,13 @@ const app = express();
 const cors = require('cors');
 const fs = require('fs');
 var http = require('http');
-require('dotenv');
 
 const swaggerUI = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 
 const config = require('./config/index');
 
-console.log('!!!: ', config(process.env.NODE_ENV));
+console.log('!!!: ', config);
 
 var swaggerDefinition = {
   info: {

@@ -10,7 +10,6 @@
             "editor.tabSize": 2,
             "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
-
         "workbench.iconTheme": "material-icon-theme",
         "workbench.editorAssociations": {
             "*.ipynb": "jupyter-notebook"
@@ -35,6 +34,16 @@
     "recommendations": [
         "esbenp.prettier-vscode",
         "editorconfig.editorconfig",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        // windows task kill
+        "shynet.vscode-taskkill",
+        "gruntfuggly.todo-tree",
+        "pkief.material-icon-theme",
+        // vscode color schem
+        "trinm1709.dracula-theme-from-intellij",
+        // bracket color
+        "coenraads.bracket-pair-colorizer-2",
     ]
    }
 }
