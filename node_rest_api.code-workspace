@@ -1,0 +1,41 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "[javascript]": {
+            "editor.rulers": [100],
+            "editor.tabSize": 2,
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+
+        "workbench.iconTheme": "material-icon-theme",
+        "workbench.editorAssociations": {
+            "*.ipynb": "jupyter-notebook"
+        },
+        "editor.minimap.enabled": false,
+        "workbench.editor.enablePreview": false,
+        "workbench.editor.enablePreviewFromQuickOpen": false,
+        "workbench.editor.revealIfOpen": true,
+        "explorer.confirmDelete": false,
+        "workbench.colorTheme": "Darcula Theme from IntelliJ",
+        "notebook.cellToolbarLocation": {
+            "default": "right",
+            "jupyter-notebook": "left"
+        },
+        "files.associations": {
+            "*.py": "python"
+        },
+        "git.autofetch": true,
+        "editor.formatOnSave": true
+    },
+   "extensions": {
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "stylelint.vscode-stylelint",
+        "editorconfig.editorconfig",
+    ]
+   }
+}
