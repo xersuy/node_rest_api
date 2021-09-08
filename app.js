@@ -9,10 +9,6 @@ var http = require('http');
 const swaggerUI = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 
-const config = require('./config/index');
-
-console.log('!!!: ', config);
-
 var swaggerDefinition = {
   info: {
     // API informations
@@ -47,6 +43,11 @@ var customSwaggerOption = {
 // JSDoc apply
 const swaggerSpec = swaggerJSDoc(customSwaggerOption);
 
+const env = process.env.NODE_ENV || 'development';
+const config = require('./config/index.js')[env];
+
+console.log(config);
+
 // cors apply
 app.use(cors());
 app.use(express.urlencoded({extended: true}));
@@ -62,4 +63,4 @@ app.use((req, res, next) => {
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 app.use(express.static(path.join(__dirname, 'build')));
 
-http.createServer(app).listen(80);
+http.createServer(app).listen(config.port ?? 80);
