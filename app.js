@@ -9,6 +9,11 @@ var http = require('http');
 const swaggerUI = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 
+const env = process.env.NODE_ENV || 'development';
+const config = require('./config/index.js')[env];
+
+console.log(config);
+
 var swaggerDefinition = {
   info: {
     // API informations
@@ -42,11 +47,6 @@ var customSwaggerOption = {
 
 // JSDoc apply
 const swaggerSpec = swaggerJSDoc(customSwaggerOption);
-
-const env = process.env.NODE_ENV || 'development';
-const config = require('./config/index.js')[env];
-
-console.log(config);
 
 // cors apply
 app.use(cors());
